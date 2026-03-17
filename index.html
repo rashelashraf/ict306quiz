@@ -1053,109 +1053,123 @@
 
         ]
     },
-            2: {
-                title: "Week 2: Planning for Organizational Readiness",
-                subtitle: "Planning for Organizational Readiness",
-                questions: [
-                    {
-                        id: 1,
-                        type: "multiple",
-                        question: "Which of the following are elements required to begin the Contingency Planning (CP) process? (Select all that apply)",
-                        options: [
-                            "Contingency Planning Management Team (CPMT)",
-                            "Business Impact Analysis (BIA)",
-                            "Marketing Strategy Plan",
-                            "Planning methodology",
-                            "Access to financial resources"
-                        ],
-                        correct: [0, 1, 3, 4]
-                    },
-                    {
-                        id: 2,
-                        type: "single",
-                        question: "Which team is primarily responsible for managing and conducting the overall CP process?",
-                        options: [
-                            "Risk Management (RM) Team",
-                            "Contingency Planning Management Team (CPMT)",
-                            "IT Help Desk",
-                            "External Auditor"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        id: 3,
-                        type: "truefalse",
-                        question: "The purpose of the CP policy is to define the scope of CP operations and establish managerial intent.",
-                        correct: true
-                    },
-                    {
-                        id: 4,
-                        type: "fillblank",
-                        question: "The __________ is an investigation and assessment of the impact that various events or incidents can have on the organization.",
-                        correct: ["Business Impact Analysis", "BIA", "business impact analysis"]
-                    },
-                    {
-                        id: 5,
-                        type: "multiple",
-                        question: "Which of the following are stages of the CPMT’s Business Impact Analysis (BIA)? (Select all that apply)",
-                        options: [
-                            "Assessing mission/business processes and recovery criticality",
-                            "Identifying resource requirements",
-                            "Designing firewall rules",
-                            "Identifying recovery priorities"
-                        ],
-                        correct: [0, 1, 3]
-                    },
-                    {
-                        id: 6,
-                        type: "fillblank",
-                        question: "In weighted ranking of business processes, the sum of all criterion weights must equal __________.",
-                        correct: ["1.0", "1"]
-                    },
-                    {
-                        id: 7,
-                        type: "single",
-                        question: "If an online banking system crashes at 10:00 AM and must be restored by 2:00 PM, this requirement defines which metric?",
-                        options: [
-                            "Recovery Point Objective (RPO)",
-                            "Recovery Time Objective (RTO)",
-                            "Work Recovery Time (WRT)",
-                            "Business Impact Analysis (BIA)"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        id: 8,
-                        type: "single",
-                        question: "Which downtime metric defines how long a system can be unavailable before serious business damage occurs?",
-                        options: [
-                            "Recovery Time Objective (RTO)",
-                            "Recovery Point Objective (RPO)",
-                            "Maximum Tolerable Downtime (MTD)",
-                            "Work Recovery Time (WRT)"
-                        ],
-                        correct: 2
-                    },
-                    {
-                        id: 9,
-                        type: "truefalse",
-                        question: "RTO must be shorter than MTD to avoid exceeding maximum tolerable downtime.",
-                        correct: true
-                    },
-                    {
-                        id: 10,
-                        type: "single",
-                        question: "According to the slides, what is the number one budgetary expense for Disaster Recovery (DR)?",
-                        options: [
-                            "Employee overtime",
-                            "Insurance",
-                            "Hardware redundancy",
-                            "Staff training"
-                        ],
-                        correct: 1
-                    }
-                    ]
-                },
+2: {
+    title: "Week 2: Web Server Security & Attacks",
+    subtitle: "Common Web Attacks, Misconfigurations, and Defense",
+    questions: [
+        {
+            id: 1,
+            type: "single",
+            question: "An attacker crafts the following URL to access sensitive files on a web server: http://example.com/view.php?file=../../../../etc/passwd. Which attack vector BEST describes this technique?",
+            options: [
+                "DNS Hijacking - manipulating domain resolution to redirect users",
+                "Directory Traversal - using path manipulation sequences to access restricted files",
+                "HTTP Response Splitting - injecting CRLF to manipulate HTTP headers",
+                "Cross-Site Scripting - injecting malicious scripts into web pages"
+            ],
+            correct: 1
+        },
+        {
+            id: 2,
+            type: "single",
+            question: "During a Man-in-the-Middle (MITM) attack on a local network, an attacker needs to intercept traffic between a victim and the gateway. What is the PRIMARY purpose of ARP spoofing in this scenario?",
+            options: [
+                "To steal web server administrator credentials directly from the database",
+                "To poison DNS cache entries with malicious IP addresses",
+                "To position the attacker's machine as the intermediary between client and gateway",
+                "To perform SQL injection attacks on web application databases"
+            ],
+            correct: 2
+        },
+        {
+            id: 3,
+            type: "single",
+            question: "A penetration tester needs to perform a Layer 7 (Application Layer) DDoS simulation against a web server to test its resilience. Which tool is specifically designed for HTTP-level denial of service attacks?",
+            options: [
+                "Hydra - network authentication brute-forcing tool",
+                "DDOSIM - Layer 7 DDoS simulator for HTTP/HTTPS floods",
+                "Burp Suite - web application security testing platform",
+                "Nikto - web vulnerability scanner"
+            ],
+            correct: 1
+        },
+        {
+            id: 4,
+            type: "single",
+            question: "During reconnaissance, a robots.txt file contains disallowed directories such as /admin/, /backup/, and /config/. What does this PRIMARILY reveal?",
+            options: [
+                "Hashed administrator passwords stored in the database",
+                "Hidden directories that may contain sensitive resources or admin panels",
+                "DNS records that have been compromised by attackers",
+                "SSL/TLS certificate expiration details"
+            ],
+            correct: 1
+        },
+        {
+            id: 5,
+            type: "single",
+            question: "In a DNS amplification attack, which transport protocol is MOST commonly exploited?",
+            options: [
+                "HTTP",
+                "SMTP",
+                "UDP",
+                "FTP"
+            ],
+            correct: 2
+        },
+        {
+            id: 6,
+            type: "single",
+            question: "A web server has directory listing enabled. What is the PRIMARY security risk?",
+            options: [
+                "It allows SQL injection attacks",
+                "It exposes directory structure and files for reconnaissance",
+                "It grants root access automatically",
+                "It enables cross-site scripting attacks"
+            ],
+            correct: 1
+        },
+        {
+            id: 7,
+            type: "multiple",
+            question: "Which of the following represent web server misconfigurations that could be exploited by attackers? (Select ALL that apply)",
+            options: [
+                "Directory listing enabled on the web server",
+                "Strict firewall rules with whitelist-only access",
+                "Absence of regular patch management and updates",
+                "Default administrator accounts disabled or removed",
+                "Verbose error messages revealing system information"
+            ],
+            correct: [0, 2, 4]
+        },
+        {
+            id: 8,
+            type: "multiple",
+            question: "Which tools can be effectively used for brute-forcing web server authentication credentials? (Select ALL that apply)",
+            options: [
+                "Hydra - parallelized login cracker supporting multiple protocols",
+                "XOIC - Layer 7 DDoS attack tool",
+                "Brutus - remote password cracker with HTTP form support",
+                "PyLoris - slow HTTP request DoS tool",
+                "Burp Suite Intruder - automated credential testing"
+            ],
+            correct: [0, 2, 4]
+        },
+        {
+            id: 9,
+            type: "multiple",
+            question: "Which defensive measures can effectively prevent HTTP Response Splitting attacks? (Select ALL that apply)",
+            options: [
+                "Strict input validation and sanitization of user input",
+                "Removing the robots.txt file",
+                "Filtering carriage return (CR) and line feed (LF) characters",
+                "Increasing server timeout values",
+                "Using web application firewalls (WAF)"
+            ],
+            correct: [0, 2, 4]
+        }
+    ]
+},
             3: {
                 title: "Week 3: Risk Evaluation",
                 subtitle: "Assessing likelihood and severity",
